@@ -2,6 +2,7 @@ const Mailchimp = require('mailchimp-api-v3')
 const isEmail = require('validator/lib/isEmail')
 const dotenv = require('dotenv')
 const micro = require('micro')
+const cors = require('micro-cors')
 
 
 // Load the contents of .env file into environment variables
@@ -11,7 +12,7 @@ const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY)
 
 
 // This function handles all requests to the server
-module.exports = async (req, res) => {
+module.exports = cors(async (req, res) => {
 
     // This API only supports POST requests to add emails to the mailing list
     if (req.method === 'POST') {
@@ -46,4 +47,4 @@ module.exports = async (req, res) => {
     else {
         return 'Improper Usage. Try POSTing here with a JSON "email" parameter.'
     }
-}
+})

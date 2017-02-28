@@ -646,7 +646,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
-micro@^7.0.6:
+micro-cors@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/micro-cors/-/micro-cors-0.0.1.tgz#f3e1f85936e33bf15d321ba57938a6407e1976fa"
+
+micro@latest:
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/micro/-/micro-7.0.6.tgz#d1a0ee1b4bacb2aa393be868fd52576b849a81ff"
   dependencies:
