@@ -2,13 +2,15 @@ const Mailchimp = require('mailchimp-api-v3')
 const isEmail = require('validator/lib/isEmail')
 const dotenv = require('dotenv')
 const micro = require('micro')
-const cors = require('micro-cors')
+const microCors = require('micro-cors')
 
 
 // Load the contents of .env file into environment variables
 dotenv.load()
 // Initiate Mailchimp with API key from environment
 const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY)
+// Configure CORS
+const cors = microCors({ origin: 'http://smcprogramming.club' })
 
 
 // This function handles all requests to the server
