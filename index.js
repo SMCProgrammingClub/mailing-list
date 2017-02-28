@@ -10,7 +10,7 @@ dotenv.load()
 // Initiate Mailchimp with API key from environment
 const mailchimp = new Mailchimp(process.env.MAILCHIMP_API_KEY)
 // Configure CORS
-const cors = microCors({ origin: 'http://smcprogramming.club' })
+const cors = microCors({ origin: '*' })
 
 
 // This function handles all requests to the server
